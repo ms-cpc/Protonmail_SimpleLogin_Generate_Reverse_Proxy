@@ -21,7 +21,13 @@
   },
   "browser_specific_settings": {
     "gecko": {
-      "id": "mark@southby.ca"
+      "id": "proton-simplelogin-automator@mycustomplugin",
+      "data_collection_permissions": {
+        "required": [
+          "authenticationInfo",
+          "websiteActivity"
+        ]
+      }
     }
   }
 }
