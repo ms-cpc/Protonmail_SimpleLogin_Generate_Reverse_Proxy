@@ -2,12 +2,11 @@
   "manifest_version": 3,
   "name": "ProtonMail SimpleLogin Automator",
   "version": "1.0",
-  "description": "Automates reverse-alias generation for custom@aliasedoman.com",
+  "description": "Automates reverse-alias generation for mark@southby.ca",
   "permissions": [
     "storage"
   ],
   "host_permissions": [
-    "https://proton.me/*",
     "https://proton.me/*",
     "https://simplelogin.io/*"
   ],
@@ -19,5 +18,10 @@
     "page": "options.html",
     "open_in_tab": true,
     "browser_style": false
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "mark@southby.ca"
+    }
   }
 }
