@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 320px;
+      padding: 12px;
+      background-color: #11111a;
+      font-family: system-ui, sans-serif;
+      margin: 0;
+      box-sizing: border-box;
+      border: 3px solid #FF00FF;
+    }
+    h3 {
+      color: #FF00FF;
+      margin-top: 0;
+      font-size: 13px;
+      border-bottom: 2px solid #FF00FF;
+      padding-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    label {
+      color: #aaa;
+      font-size: 11px;
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 4px;
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      background: #000;
+      border: 1px solid #FF00FF;
+      color: #fff;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 12px;
+      outline: none;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #FF00FF;
+      color: #000;
+      border: none;
+      border-radius: 4px;
+      font-weight: 900;
+      cursor: pointer;
+      font-size: 11px;
+      margin-top: 10px;
+    }
+    button:disabled {
+      opacity: 0.5;
+    }
+    .secondary-btn {
+      background-color: #1a1a2e;
+      color: #FF00FF;
+      border: 1px solid #FF00FF;
+      margin-top: 5px;
+    }
+    #historyContainer {
+      margin-top: 15px;
+      border-top: 1px dashed #FF00FF;
+      padding-top: 10px;
+    }
+    .history-item {
+      background: #111;
+      border: 1px solid #333;
+      padding: 6px;
+      margin-top: 5px;
+      border-radius: 4px;
+      font-size: 11px;
+      color: #fff;
+      word-break: break-all;
+      cursor: pointer;
+    }
+    .history-item:hover {
+      border-color: #FF00FF;
+    }
+    .history-tag {
+      color: #FF00FF;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 2px;
+    }
+    #logOutput {
+      margin-top: 10px;
+      background: #222;
+      color: #ff5555;
+      font-size: 11px;
+      padding: 6px;
+      border-radius: 4px;
+      word-break: break-all;
+      display: none;
+      border: 1px solid #ff5555;
+    }
+  </style>
+</head>
+<body>
+  <h3>SimpleLogin Route</h3>
+  
+  <label>Recipient Target Destination:</label>
+  <input type="text" id="targetContact" placeholder="eg: name@domain.com">
+  
+<button id="generateBtn">GENERATE PROXY ROUTE</button>
+<button id="exportVcfBtn" class="secondary-btn">DOWNLOAD PROTON CONTACTS VCF</button>
+<button id="clearAllBtn" class="secondary-btn" style="border-color: #ff5555; color: #ff5555;">CLEAR ALL HISTORY</button>
+
+
+  
+  <div id="historyContainer">
+    <label>Recent Proxy Routes (Click to copy):</label>
+    <div id="historyList"></div>
+  </div>
+
+  <div id="logOutput"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
