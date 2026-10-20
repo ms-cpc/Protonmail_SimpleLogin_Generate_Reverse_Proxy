@@ -20,3 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (items.slSenderAlias) document.getElementById('senderAlias').value = items.slSenderAlias;
   });
 });
+
+// Saving credentials
+browser.storage.local.set({
+  apiKey: document.getElementById('api-key').value,
+  userPass: document.getElementById('password').value
+});
